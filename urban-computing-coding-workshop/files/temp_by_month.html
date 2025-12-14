@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-2df433271b1774733460506425f1ce00"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Mean_Temp", "scale": {"reverse": true, "scheme": "redblue"}, "title": "Avg Temp (\u00b0F)", "type": "quantitative"}, "opacity": {"condition": {"param": "param_3", "value": 1.0, "empty": true}, "value": 0.3}, "x": {"field": "Month", "sort": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "title": "Month", "type": "nominal"}, "y": {"field": "Mean_Temp", "title": "Average Temperature (\u00b0F)", "type": "quantitative"}}, "height": 120, "params": [{"name": "param_3", "select": {"type": "point", "fields": ["Month"], "nearest": true, "on": "click"}}], "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-2df433271b1774733460506425f1ce00": [{"Month": "January", "Mean_Temp": 34.935483870967744}, {"Month": "February", "Mean_Temp": 36.86290322580645}, {"Month": "March", "Mean_Temp": 44.053225806451614}, {"Month": "April", "Mean_Temp": 53.71290322580645}, {"Month": "May", "Mean_Temp": 63.27258064516129}, {"Month": "June", "Mean_Temp": 72.67096774193548}, {"Month": "July", "Mean_Temp": 78.70806451612903}, {"Month": "August", "Mean_Temp": 77.60161290322581}, {"Month": "September", "Mean_Temp": 70.71290322580644}, {"Month": "October", "Mean_Temp": 59.78225806451613}, {"Month": "November", "Mean_Temp": 49.66451612903226}, {"Month": "December", "Mean_Temp": 40.4241935483871}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

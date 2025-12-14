@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Class Project — Design Strategies of Urban Computing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <!-- header -->
+    <h1 class="text-3xl font-bold text-zinc-800">My mapping project</h1>
+    <img class="mt-4 mb-14 hover:scale-[0.99]" src="images/boston.jpg" alt="Photo of Boston Skyline">
+
+    <div id="background-info" class="p-4 border border-gray-400 rounded-xl space-y-2">
+        <h2 class="text-xl font-bold text-black-400">Headline 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- horizontal line separator -->
+    <hr class="my-8 border-gray-400">
+
+    <!-- explaining my project -->
+    <div class="space-y-2 mb-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- buttons and effect -->
+    <div id="map">
+        <a class="inline-block border border-white text-white p-4 rounded-full bg-zinc-900 hover:bg-red-300 hover:border-black hover:text-zinc-900 hover:bg-zinc-100" href="https://tailwindcss.com/docs/" target="_blank">Tailwind</a>
+    </div>
+
+    <!-- slideshow -->
+    <div class="my-8">
+      <h2 class="text-2xl font-bold text-zinc-800 mb-4">Image Gallery</h2>
+    
+      <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4" style="scroll-behavior: smooth;">
+      
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-105" src="https://plus.unsplash.com/premium_photo-1694475434235-12413ec38b3e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Waterfront Image">
+        </div>
+        
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden">
+          <img class="w-full h-full object-cover hover:scale-[1.5]" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2555&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Architecture Image">
+        </div>
+        
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden hover:animate-bounce">
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1542820229-081e0c12af0b?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="City Image">
+        </div>
+        
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden hover:animate-spin">
+          <img class="w-full h-full object-cover" src="https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Skyline Image">
+        </div>
+        
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden">
+          <img class="w-full h-full object-cover hover:animate-pulse" src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Nature Image">
+        </div>
+
+        <div class="snap-start flex-shrink-0 w-80 h-60 rounded-lg overflow-hidden">
+          <img class="w-full h-full object-cover hover:animate-ping" src="https://plus.unsplash.com/premium_photo-1669829638352-7d1c3a306a5c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountains Images">
+        </div>
+    </div>
+    
+    <p class="text-sm text-gray-600 mt-2">Scroll horizontally to view more images</p>
+    
+    <!-- horizontal line separator -->
+    <hr class="my-8 border-gray-400">
+
+    <!-- add your interactive map here -->
+    <div class="mt-12 p-8 bg-gray-300 rounded-lg my-6">My map (placeholder)</div>
+
+    <!-- horizontal line separator -->
+    <hr class="my-8 border-gray-400">
+
+    <!-- footer -->
+    <div class="mt-2 mb-8">
+      <h3 class="font-medium mb-1">My Class Projec's Name</h3>
+      <p>Design Strategies of Urban Computing<br>Spring 2025<br>College of Arts, Media and Design<br>Northeastern University</p>
+      <img class="mt-8" src="images/neu-logo-text.svg" alt="Northeastern Logo">
+    </div>
+
+  </div>
+</body>
+</html>
